@@ -7,7 +7,7 @@
     
 
     <title>
-      Archives 
+      C11--constexpr指定符 | Hades 
     </title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -16,13 +16,18 @@
     
     
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Archives">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+    <meta name="description" content="​    constexpr 指定符声明可以在编译时求得函数或变量的值。然后这些变量和函数（若给定了合适的函数参数）可用于仅允许编译时常量表达式之处。 constexpr变量constexpr变量必须满足该变量初始化的完整表达式必须是常量表达式。 1234int a=1,b;constexpr int i = a+1;	//正确constexpr int j = b;	//错误，b的值在编译期不知">
+<meta name="keywords" content="C11">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C11--constexpr指定符 | Hades">
+<meta property="og:url" content="http://yoursite.com/2019/02/10/C11-constexpr指定符/index.html">
 <meta property="og:site_name" content="Hades">
+<meta property="og:description" content="​    constexpr 指定符声明可以在编译时求得函数或变量的值。然后这些变量和函数（若给定了合适的函数参数）可用于仅允许编译时常量表达式之处。 constexpr变量constexpr变量必须满足该变量初始化的完整表达式必须是常量表达式。 1234int a=1,b;constexpr int i = a+1;	//正确constexpr int j = b;	//错误，b的值在编译期不知">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-02-10T15:15:53.107Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Archives">
+<meta name="twitter:title" content="C11--constexpr指定符 | Hades">
+<meta name="twitter:description" content="​    constexpr 指定符声明可以在编译时求得函数或变量的值。然后这些变量和函数（若给定了合适的函数参数）可用于仅允许编译时常量表达式之处。 constexpr变量constexpr变量必须满足该变量初始化的完整表达式必须是常量表达式。 1234int a=1,b;constexpr int i = a+1;	//正确constexpr int j = b;	//错误，b的值在编译期不知">
     
     
     
@@ -176,64 +181,57 @@ classes that you can use:
         <div class="content-wrapper__inner entry">
             
 
+<article class="post-container post-container--single">
 
-   <!-- do nothing -->
-
-
-<div class="main-post-list">
-    <ol class="post-list">
+  <header class="post-header">
     
-    
-    <li>
+    <h1 class="post-title">C11--constexpr指定符</h1>
 
-      <h2 class="post-list__post-title post-title">
-        <a href="/2019/02/10/C11-constexpr指定符/" title="link to C11--constexpr指定符">C11--constexpr指定符</a>
-      </h2>
-
-      <div class="post-list__meta">
-
-        <time datetime="2019-02-10" class="post-list__meta--date date">2019-02-10</time> 
-      </div>
-
-      <div class="excerpt">
-        
-      </div>
-
-      <hr class="post-list__divider">
-    </li>
-    
-    <li>
-
-      <h2 class="post-list__post-title post-title">
-        <a href="/2019/02/09/中文字典树/" title="link to 中文字典树">中文字典树</a>
-      </h2>
-
-      <div class="post-list__meta">
-
-        <time datetime="2019-02-09" class="post-list__meta--date date">2019-02-09</time> 
-      </div>
-
-      <div class="excerpt">
-        
-      </div>
-
-      <hr class="post-list__divider">
-    </li>
-    
-  </ol>
-
-  <hr class="post-list__divider ">
-
-<nav class="pagination" role="navigation">
     
 
-    <span class="pagination__page-number"> 1 / 1</span>
+    <div class="post-meta">
+      <time datetime="2019-02-10" class="post-meta__date date">2019-02-10</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/C11/">C11</a>
+            </font>
+          
+
+      </span>
+    </div>
     
     
-</nav>
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <p>​    constexpr 指定符声明可以在编译时求得函数或变量的值。然后这些变量和函数（若给定了合适的函数参数）可用于仅允许编译时常量表达式之处。</p>
+<h3 id="constexpr变量"><a href="#constexpr变量" class="headerlink" title="constexpr变量"></a>constexpr变量</h3><p>constexpr变量必须满足该变量初始化的完整表达式必须是常量表达式。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a=<span class="number">1</span>,b;</span><br><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> i = a+<span class="number">1</span>;	<span class="comment">//正确</span></span><br><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> j = b;	<span class="comment">//错误，b的值在编译期不知道</span></span><br><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> k = f();	<span class="comment">//当函数f()为constexpr类型时正确</span></span><br></pre></td></tr></table></figure>
+<p>而const修饰的变量不需要初始化为在编译期可求得的值。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span>  i = a;	<span class="comment">//正确</span></span><br></pre></td></tr></table></figure>
+<h3 id="constexpr函数"><a href="#constexpr函数" class="headerlink" title="constexpr函数"></a>constexpr函数</h3><p>c11中，constexpr函数不能定义变量，使用for之类的控制流语句。</p>
+<p>c14中，constexpr函数中可以定义变量，使用goto,try以外的大多数控制流语句。</p>
+<p>c20中，constexpr函数可以使用try语句。</p>
+
+  </section>
+
+  <section class="post-comments">
+
+    <!-- 将评论系统（例如Disqus、多说、友言、畅言等）提供的代码片段粘贴在这里 -->
+    
+</section>
 
 
-</div>
+</article>
+
+
             <footer class="footer">
 
     <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
@@ -263,6 +261,19 @@ classes that you can use:
 
 
     
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
     
     
     <!--kill ie6 -->
